@@ -1,0 +1,33 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Coffee {
+  id: ID!
+  name: String!
+  brand: String!
+  flavors: [String!]
+}
+
+type Query {
+  coffees: [Coffee!]!
+  coffee(id: ID!): Coffee!
+}
+
+type Mutation {
+  createCoffee(createCoffeeInput: CreateCoffeeInput!): Coffee!
+  updateCoffee(id: String!, updateCoffeeInput: UpdateCoffeeInput!): Coffee!
+  removeCoffee(id: String!): Coffee!
+}
+
+input CreateCoffeeInput {
+  name: String!
+  brand: String!
+  flowers: [String!]
+}
+
+input UpdateCoffeeInput {
+  name: String
+  brand: String
+  flowers: [String!]
+}
