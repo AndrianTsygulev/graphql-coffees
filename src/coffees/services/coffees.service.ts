@@ -1,11 +1,11 @@
 import { Injectable, ParseIntPipe } from '@nestjs/common';
-import { CreateCoffeeInput } from './dto/create-coffee.input';
+import { CreateCoffeeInput } from '../dto/create-coffee.input';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Coffee } from './entities/coffee.entity';
+import { Coffee } from '../entities/coffee.entity';
 import { Repository } from 'typeorm';
 import { UserInputError } from 'apollo-server-express';
 import { Args } from '@nestjs/graphql';
-import { UpdateCoffeeInput } from './dto/update-coffee.input';
+import { UpdateCoffeeInput } from '../dto/update-coffee.input';
 
 @Injectable()
 export class CoffeesService {

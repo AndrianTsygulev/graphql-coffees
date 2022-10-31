@@ -1,9 +1,9 @@
 import { Args, ID, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { BeanTypes, /*BeanTypes,*/ Coffee } from './entities/coffee.entity';
+import { BeanTypes, /*BeanTypes,*/ Coffee } from '../entities/coffee.entity';
 import { ParseIntPipe } from '@nestjs/common';
-import { CreateCoffeeInput } from './dto/create-coffee.input';
-import { UpdateCoffeeInput } from './dto/update-coffee.input';
-import { CoffeesService } from './coffees.service';
+import { CreateCoffeeInput } from '../dto/create-coffee.input';
+import { UpdateCoffeeInput } from '../dto/update-coffee.input';
+import { CoffeesService } from '../services/coffees.service';
 
 @Resolver()
 export class CoffeesResolver {
